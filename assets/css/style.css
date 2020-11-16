@@ -3,6 +3,9 @@
    margin: 0;
    box-sizing: border-box;
  }
+ body {
+   background-color: rgb(170, 42, 81);
+ }
 /* utility class */
 .d_flex {
   display: flex;
@@ -12,4 +15,18 @@
 }
 .text_cap {
   text-transform: capitalize;
+}
+#data_user,  #ticket_user {
+  height: 300px;
+  width: 1000px;
+  background-color: white;
+  margin: auto;
+}
+h2 {
+  text-align: center;
+  margin: 1rem;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  text-shadow: 1px 1px grey;
 }

@@ -1,11 +1,13 @@
 //creazione var
-
+var ticketUser = document.getElementById('ticket_user');
 // calcoli dei km
 
 // calcolo della fascia d'età
 var btnTicket = document.getElementById('ticketgenerator');
 btnTicket.addEventListener("click", function () {
-
+  //display ticket
+  ticketUser.style.opacity = '1';
+  ticketUser.style.transition = '0.3s ease-in-out';
   //genera ticket utente
    var userDataInput = document.getElementById('userdata');
    var userKmInput = document.getElementById('user_km');
@@ -57,5 +59,8 @@ btnTicket.addEventListener("click", function () {
 //btn annulla
 var btnNull = document.getElementById('ticketnull');
 btnNull.addEventListener('click', function () {
+
   //annullamento biglietto
+  ticketUser.style.opacity = "0";
+  ticketUser.style.transition = '0.3s ease-in-out';
 });
