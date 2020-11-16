@@ -1,0 +1,15 @@
+ * {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+ }
+/* utility class */
+.d_flex {
+  display: flex;
+}
+.text_upper {
+  text-transform: uppercase;
+}
+.text_cap {
+  text-transform: capitalize;
+}

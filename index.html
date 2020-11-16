@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Biglietto Treno</title>
+</head>
+<body>
+  <div class="info_user">
+    <div class="d_flex" id="data-user">
+      <form >
+        <label for="name">Nome e cognome</label>
+        <input id="userdata" type="text" name="fullname" value="" placeholder="Nome e cognome">
+        <label for="distance">Km da percorrere</label>
+        <input id="user_km" type="number" name="distance" value="" placeholder="Inserisci i km">
+        <label for="age">Seleziona fascia età</label>
+        <select id="offer" class="" name="age options">
+            <option id="under18" value="minorenne">minorenne</option>
+            <option id="standardprice" value="magiorenne">magiorenne</option>
+            <option id="over65" value="over65">over 65</option>
+        </select>
+        <button id="ticketgenerator" type="button" name="button">Genera</button>
+        <button id="ticketnull" type="button" name="button">Cancella</button>
+      </form>
+    </div>
+  </div>
+  <div class="ticket_user">
+    <h2 class="text_upper">Il tuo biglietto</h2>
+    <div class="final_ticket">
+      <h3 class="text_upper">dettaglio passaggeri</h3>
+      <table>
+        <tr class="text_cap">
+          <td class="text_upper">nome passeggero</td>
+          <td >offerta</td>
+          <td >carrozza</td>
+          <td >codice cP</td>
+          <td >costo biglietto</td>
+        </tr>
+        <tr class="text_cap">
+          <td id="username"></td>
+          <td id="discount"></td>
+          <td id="trainplace"></td>
+          <td id="cpcode"></td>
+          <td id="finalcost"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+<script src="assets/js/main.js">
+</script>
+</body>
+</html>
