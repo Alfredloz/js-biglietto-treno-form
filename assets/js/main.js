@@ -1,6 +1,17 @@
 //creazione var
 var ticketUser = document.getElementById('ticket_user');
-// calcoli dei km
+// elementi del biglietto
+var userName = document.getElementById('username');
+var discountType = document.getElementById('discount');
+var trainPlace = document.getElementById('trainplace');
+var cpCode = document.getElementById('cpcode');
+var finalCost = document.getElementById('finalcost');
+
+//genera ticket utente
+ var userDataInput = document.getElementById('userdata');
+ var userKmInput = document.getElementById('user_km');
+ var offerInput = document.getElementById('offer');
+
 
 // calcolo della fascia d'età
 var btnTicket = document.getElementById('ticketgenerator');
@@ -8,10 +19,6 @@ btnTicket.addEventListener("click", function () {
   //display ticket
   ticketUser.style.opacity = '1';
   ticketUser.style.transition = '0.3s ease-in-out';
-  //genera ticket utente
-   var userDataInput = document.getElementById('userdata');
-   var userKmInput = document.getElementById('user_km');
-   var offerInput = document.getElementById('offer');
 
    //selezione value
    var userData = userDataInput.value;
@@ -25,11 +32,11 @@ btnTicket.addEventListener("click", function () {
 
    if (offerOptions == "minorenne") {
      var minorOffer = Number((ticketprice * 20) / 100);
-     document.getElementById('finalcost').innerHTML= Number(ticketprice - minorOffer);
+     document.getElementById('finalcost').innerHTML= Number(ticketprice - minorOffer).toFixed(2);
      document.getElementById('discount').innerHTML= 'Sconto per minorenni';
    }  else if (offerOptions == "over65") {
      var olderOffer = Number((ticketprice * 40) / 100);
-      document.getElementById('finalcost').innerHTML= Number(ticketprice - olderOffer);
+      document.getElementById('finalcost').innerHTML= Number(ticketprice - olderOffer).toFixed(2);
       document.getElementById('discount').innerHTML= 'Sconto per anziani';
    } else {
      document.getElementById('finalcost').innerHTML= ticketprice;
@@ -42,12 +49,6 @@ btnTicket.addEventListener("click", function () {
    //generazione codice CP
    var cpNumbers = Math.floor(Math.random() * (100000 - 90000) + 90000);
 
-   // elementi del biglietto
-   var userName = document.getElementById('username');
-   var discountType = document.getElementById('discount');
-   var trainPlace = document.getElementById('trainplace');
-   var cpCode = document.getElementById('cpcode');
-   var finalCost = document.getElementById('finalcost');
 
    //inserimento dati biglietto
 
@@ -63,4 +64,8 @@ btnNull.addEventListener('click', function () {
   //annullamento biglietto
   ticketUser.style.opacity = "0";
   ticketUser.style.transition = '0.3s ease-in-out';
+
+  //annullamento dati
+  userName.innerHTML= '';
+
 });

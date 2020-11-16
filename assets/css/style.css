@@ -21,6 +21,8 @@
   width: 1000px;
   background-color: white;
   margin: auto;
+  border-radius: 5px;
+  box-shadow: 5px 5px rgba(123, 121, 124, 0.71);
 }
 h2 {
   text-align: center;
@@ -29,4 +31,8 @@ h2 {
   font-weight: bold;
   font-size: 2rem;
   text-shadow: 1px 1px grey;
+}
+h3 {
+  text-align: center;
+  margin: 1rem;
 }
