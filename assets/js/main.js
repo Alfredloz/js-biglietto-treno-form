@@ -15,7 +15,9 @@ var finalCost = document.getElementById('finalcost');
 
 // calcolo della fascia d'età
 var btnTicket = document.getElementById('ticketgenerator');
+//tasto genera
 btnTicket.addEventListener("click", function () {
+
   //display ticket
   ticketUser.style.opacity = '1';
   ticketUser.style.transition = '0.3s ease-in-out';
@@ -30,16 +32,17 @@ btnTicket.addEventListener("click", function () {
    var ticketKm = Number(0.21);
    var ticketprice = Number(ticketKm * userKm);
 
+   //calcolo biglietto tasto genera
    if (offerOptions == "minorenne") {
      var minorOffer = Number((ticketprice * 20) / 100);
-     document.getElementById('finalcost').innerHTML= Number(ticketprice - minorOffer).toFixed(2);
+     document.getElementById('finalcost').innerHTML='€ ' + Number(ticketprice - minorOffer).toFixed(2);
      document.getElementById('discount').innerHTML= 'Sconto per minorenni';
    }  else if (offerOptions == "over65") {
      var olderOffer = Number((ticketprice * 40) / 100);
-      document.getElementById('finalcost').innerHTML= Number(ticketprice - olderOffer).toFixed(2);
+      document.getElementById('finalcost').innerHTML='€ ' + Number(ticketprice - olderOffer).toFixed(2);
       document.getElementById('discount').innerHTML= 'Sconto per anziani';
    } else {
-     document.getElementById('finalcost').innerHTML= ticketprice;
+     document.getElementById('finalcost').innerHTML='€ '+ Number(ticketprice).toFixed(2);
      document.getElementById('discount').innerHTML= 'Prezzo standard';
    }
 
@@ -66,6 +69,7 @@ btnNull.addEventListener('click', function () {
   ticketUser.style.transition = '0.3s ease-in-out';
 
   //annullamento dati
-  userName.innerHTML= '';
-
+  userDataInput.value= '';
+  userKmInput.value= '';
+  offerInput.value= 'minorenne';
 });

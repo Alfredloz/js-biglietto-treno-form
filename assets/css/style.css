@@ -24,6 +24,9 @@
   border-radius: 5px;
   box-shadow: 5px 5px rgba(123, 121, 124, 0.71);
 }
+#ticket_user {
+  opacity: 0;
+}
 h2 {
   text-align: center;
   margin: 1rem;
